@@ -1,2 +1,14 @@
 <!--index.wxml-->
-
+<!--小程序初体验-->
+<!--1.Mastache语法绑定js.中的数据-->
+<view>Hello {{name}} </view>
+<!--2.打印列表-->
+<!--for 循环遍历，引号大括号齐飞-->
+<!--item 是内部生成的-->
+<view wx:key ="proper" wx:for="{{students}}">id: {{item.id}},name: {{item.name}}, age: {{item.age}}</view>
+<!--3.事件监听改变data-->
+<view>
+<view>counter now is: {{counter}}</view>
+<button bindtap="add" size="mini">+</button>
+<button bindtap="minus" size="mini">-</button>
+</view>

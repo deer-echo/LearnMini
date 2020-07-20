@@ -1,6 +1,23 @@
 //index.js
-
-
 Page({
-  
+  data:{
+    name:"echo",
+    students:[
+      {id:1,name:"wu",age:"19"},
+      {id:2,name:"zhu",age:"18.5"},
+      {id:3,name:"java",age:"18.8"}
+    ],
+    counter:0,
+  },
+  //自定义add,minus函数
+  add(){
+    this.setData({
+      counter:this.data.counter+1
+    })
+  },
+  minus(){
+    this.setData({
+      counter:this.data.counter-1
+    })
+  }
 })
