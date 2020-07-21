@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "call",
+  "navigationBarBackgroundColor": "#ff0000",
+  "enablePullDownRefresh": true
+  
 }

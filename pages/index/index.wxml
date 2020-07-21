@@ -1,2 +1,7 @@
 <!--index.wxml-->
-
+<!--2.获取用户信息的推荐方式-->
+<button open-type="getUserInfo" size="mini" 
+bindgetuserinfo="UserInform">getUserInform</button>
+<!--3.直接展示用户信息-->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>

@@ -1,13 +1,33 @@
 {
-  "pages":[
-    "pages/index/index"
+  "pages": [
+    "pages/index/index",
+    "pages/about/about"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff0",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "orange",
+    "enablePullDownRefresh": false
   },
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "试听",
+      "iconPath": "/asset/icon/shiting.png",
+      "selectedIconPath": "/asset/icon/shiting2.png"
+    },
+    {
+      "pagePath": "pages/about/about",
+      "text": "wifi",
+      "iconPath": "asset/icon/wifi.png",
+      "selectedIconPath": "asset/icon/wifi2.png"
+    }
+  ]
+  },
+ 
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
