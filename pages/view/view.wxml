@@ -1,0 +1,20 @@
+<!--pages/view/view.wxml-->
+<!--1.基本使用：块级元素，独占一行，是个容器,可放其他组件和文本-->
+<view>哈哈哈😄</view>
+<view class="box">hehehe</view>
+<!--2.hoverclass: 同button, hover-start-time： 开始点击态的延时，hover-stay-time: 点击态保留时间-->
+<view class="box1" hover-class="box2" 
+hover-start-time="0" 
+hover-stay-time="1000">
+box1
+</view>
+<!--3.hover-stop-progation: 是否阻止父节点-->
+<view class="box3"hover-class="box4">
+<view class="box1" hover-class="box2" 
+hover-start-time="0" 
+hover-stay-time="1000"
+hover-stop-propagation="">
+box1
+<!--hover-stop-propagations="" 空为false，""中有值就是true，赋值要用mastache语法加{{}}-->
+</view>
+</view>

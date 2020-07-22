@@ -1,0 +1,25 @@
+<!--pages/text/text.wxml-->
+<!--index.wxml-->
+<!--TXTE组件-->
+<!--1.行内元素，要换行加\n-->
+<text>Hello World\n</text>
+<text>你好小程序\n</text>
+<!--selectable: true-->
+<!--2.默认情况下text文本长按不可选中-->
+<!--赋值需要Mastache语法{{}}-->
+<!--或者默认值为false的属性，直接用属性名可使其为true-->
+<!--如这里可以改为selectable-->
+<text selectable="{{true}}">Hello Coderwhy\n</text>
+<!--3.space: 决定文本空格大小-->
+<text>Hello Echo</text>
+<text space="nbsp">Hello Echo\n</text>
+<!--ensp: 空格为半个中文字符大小-->
+<text space="ensp">Hello Echo\n</text>
+<!--emsp: 空格为一个中文字符大小-->
+<text space="emsp">Hello Echo\n</text>
+<!--decode: 是否解码文本-->
+<!--&gt;为">"的解码-->
+<text>5 &gt; 3\n</text>
+<text decode>5 &gt; 3\n</text>
+
+

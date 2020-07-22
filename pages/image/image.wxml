@@ -1,0 +1,27 @@
+<!--pages/image/image.wxml-->
+<!--1.基本使用: 
+  a.image可写成单标签或双标签
+  <image/>or<image><image/>
+  b.image默认有大小320*240
+  c.image是行内块级元素（inner-block）
+-->
+<!--2.src: 本地地址/远程地址-->
+<!--相对路径-->
+<image src="../../assets/picture.jpg"/>
+<!--绝对路径-->
+<image src="/assets/picture.jpg"/>
+<!--远程图片-->
+<!--相册图片-->
+<button bindtap="handleChoose" >选择本机图片</button>
+<image src="{{filePath}}"/>
+<!--3.mode: 设置拉伸，裁剪模式(查询使用)-->
+<!--4.bindload: 监听图片加载完成-->
+<!--5.lazyload： 图片懒加载(用了才加载)-->
+<image 
+wx:for="{{1}}"
+src="{{filePath}}"
+ bindload='handleImage'
+ wx:key="proper"
+ lazy-load></image>
+ <!--6.长按识别二维码-->
+ <image show-menu-by-longpress src="/assets/picture.jpg"></image>

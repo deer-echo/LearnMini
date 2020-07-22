@@ -1,0 +1,21 @@
+/* pages/view/view.wxss */
+.box{
+  background-color: teal;
+}
+.box1{
+  width: 100px;
+  height: 100px;
+  background-color: thistle;
+}
+.box2{
+  font-size: 30px;
+  background-color: wheat;
+}
+.box3{
+  width: 200px;
+  height: 200px;
+  background-color: turquoise;
+}
+.box4{
+  background-color: yellow;
+}

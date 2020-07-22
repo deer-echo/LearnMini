@@ -1,0 +1,22 @@
+<!--pages/button/button.wxml-->
+<!--button组件-->
+<!--1.基本使用-->
+<!--默认独占一行-->
+<button>基本按钮</button>
+<!--2.size为mini时会行内显示-->
+<button size='mini'>小按钮</button>
+<!--3.type-->
+<button size="mini" type="primary">首选</button>
+<button size="mini" type="default">默认</button>
+<button size="mini" type="warn">警告</button>
+<!--4.plain：镂空效果，默认为false-->
+<button size='mini' plain>镂空</button>
+<!--5.disable：不可用-->
+<button size='mini' disable>不可用</button>
+<!--6.loading：加载,可绑定js用于加载状态切换-->
+<button size='mini' loading="{{isLoading}}">加载中</button>
+<!--7.hover-class：设置点击态,与wxml配合使用-->
+<button hover-class="pressed">点我变红</button>
+<!--8.opentype: 特殊事件-->
+<!--获取用户信息，与js配合-->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">获取用户信息</button>
