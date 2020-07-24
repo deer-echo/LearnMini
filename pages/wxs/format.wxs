@@ -1,0 +1,11 @@
+function priceFormat(price,number){
+  //逻辑或，为传入值或2
+  var number=number||2;
+  var f_price=parseFloat(price)
+  return f_price.toFixed(number)
+
+}
+//export
+module.exports={
+  priceFormat:priceFormat
+}

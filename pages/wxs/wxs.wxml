@@ -1,0 +1,29 @@
+<!--pages/wxs/wxs.wxml-->
+<!--用于调用函数-->
+<!--define wxs in wxml-->
+
+<wxs module="info">
+  var message="Hello world";
+  var name="echo";
+  var sum=function(num1,num2){
+    return num1+num2
+  }
+module.exports={
+  message:message,
+  name:name,
+  sum:sum
+
+}
+</wxs>
+<!--module equal to name
+you should use wxs by module.XXX
+if not exports the functions are private
+so we should use module.exports to expose-->
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(1,2)}}</view>
+<!--define wxs in another file(不能用)-->
+<!--import-->
+<wxs src="../wxs/format.wxs" module="format"/>
+<!--use wxs-->
+<view>{{format.priceFormat(price,5)}}</view>

@@ -1,0 +1,4 @@
+/* pages/wxss/wxss.wxss */
+/*rpx 可适配*/
+/*外部导入样式,易混样式+公共样式*/
+@import'./style/box.wxss';

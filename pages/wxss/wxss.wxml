@@ -1,0 +1,13 @@
+<!--pages/wxss/wxss.wxml-->
+<!--a.三种样式及其范围-->
+<!--1.行内（内联）样式-->
+<view style='color:red; font-size:32px;'>hello</view>
+<!--2.页内样式-->
+<view class="box">bye</view>
+<!--3.全局样式-->
+<view class="container">see you later</view>
+<!--三种样式一起-->
+<view  class="box3">你有我有全都有</view>
+<!--行内>页内>全局-->
+
+

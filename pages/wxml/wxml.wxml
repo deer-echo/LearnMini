@@ -1,0 +1,66 @@
+<!--pages/wxml/wxml.wxml-->
+<!--1.Mustache语法-->
+<view>{{firstname}} {{lastname}}</view>
+<!--表达式，三目-->
+<view>{{firstname+" "+lastname}}</view>
+<view>{{age>=18?"adult":"adolescent"}}</view>
+<view>{{nowTime}}</view>
+<!--绑定属性-->
+<button bindtap="handlecolor">点击切换文字颜色</button>
+<view class='box {{changecolor?"change":""}}'>Hello</view>
+
+<!--2.hidden and if -->
+<!--wx:if,else,elif-->
+<view wx:if="{{date==1}}">lundi</view>
+<view wx:elif="{{date==2}}">mardi</view>
+<view wx:else="{{date==3}}">mercredi</view>
+
+<!--hidden-->
+<view>-----------hidden---------</view>
+<view hidden="{{date==1}}">lundi</view>
+<view hidden="{{date==2}}">mardi</view>
+<view hidden="{{date==3}}">mercredi</view>
+<!--difference betweent hidden and if is:
+1. the value of them are on the contrary
+2.hidden only use css while if change all the data
+3.if change frequently, use hidden is better
+ -->
+
+
+ <!--3.1.列表渲染for展示循环-->
+ <!--遍历数组/字符串/数字-->in
+ <view wx:for="BRAVO" wx:key>{{item}}+{{index}}</view>
+ <view wx:for="{{10}}">{{item}}</view>
+ <view wx:for="{{['lololo','biubiubiu','nonono']}}">{{item}}</view>
+ <!--3.2.block标签不是组件
+ ，帮助包裹，不会渲染，提高性能，只接受控制属性-->
+ <!--3.3重命名item和index用于多层遍历-->
+ <block wx:for="{{students}}">
+ <block wx:for-item="innerItem" wx:for-index="innerIndex" wx:for="{{item}}">
+ <view>
+  {{innerItem}}---{{index}}-----{{innerIndex}}
+ </view>
+ </block>
+ </block>
+<!--3.4 the use of key:
+relevante to Dom, Vue 
+which can elevate effeciency
+use it's unique tag
+if you just use index
+just can eliminate the warning
+-->
+<image src="/assets/useKey.png"></image>
+
+<!--4.template-->
+<view>----------------template------------</view>
+<!--define in another file-->
+<!--import the template-->
+<!--模板不可递归导入，include可导入除了模板和wxs以外的所有东西
+include 可用于导入header和footer
+且可以递归导入
+-->
+  <import src="../wxml/template.wxml"/>
+<!--use template-->
+<template is="contentItem" data="{{btnText:'pointMe',content:'hahhaha'}}"></template>
+<template is="contentItem" data="{{btnText:'pointYou',content:'lololollo'}}"></template>
+<template is="contentItem" data="{{btnText:'pointUS',content:'kekekke'}}"></template>

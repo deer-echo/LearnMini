@@ -1,6 +1,9 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/wxs/wxs",
+    "pages/wxml/wxml",
+    "pages/wxss/wxss"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
