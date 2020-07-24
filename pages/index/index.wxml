@@ -1,2 +1,36 @@
 <!--index.wxml-->
-
+<!--1.事件处理回顾-->
+<button size="mini" bindtap="handleBtn">button</button>
+<button size="mini" bind:tap="handleBtn">button</button>
+<button size="mini" catch:tap="handleBtn">button</button>
+<!--2.常见通用事件演练-->
+<view class="box"
+bindtouchstart="handleTouchStart"
+bindtouchmove="handleTouchMove"
+bindtouchend="handleTouchEnd"
+bindlongtap="handleLongTap"
+>????</view>
+<!--3.事件对象-->
+<button bindtap="handleEvent">事件对象</button>
+<view class="outter" 
+bindtouchstart="touchOutter">outter
+<view class="inner" 
+bindtouchstart="touchInner">inner
+</view>
+</view>
+<!--4.事件参数传递 data-xxx="&&&&"-->
+<view class="container2">
+<block wx:for="{{people}}">
+<view data-item="{{item}}" data-index="{{index}}" bindtap="handleChoose" class="item">{{item}}</view>
+</block>
+</view>
+<!--5.事件冒泡（从内向外）与捕获(从外向内)-->
+<!--bind: will convey to next, catch: will stop passing-->
+<block>
+  <view class="view1" capture-bind:tap="handleView1" bind:catch="handleTap1">
+    <view class="view2" capture-bind:tap="handleView2" bind:catch="handleTap2">
+       <view class="view3" capture-bind:tap="handleView3" bindtap="handleTap3">
+       </view>
+    </view>
+  </view>
+</block>
