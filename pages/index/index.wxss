@@ -1,1 +1,7 @@
 /**index.wxss**/
+.title{
+  color: chocolate;
+}
+.red{
+  color:red
+}

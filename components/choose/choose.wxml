@@ -1,0 +1,19 @@
+<!--components/choose/choose.wxml-->
+<!--
+  for循环遍历展示选项
+  样式用三目表示选中态
+  绑定tap事件更新选中的选项
+  将index，item传送到event中
+-->
+<view class="container">
+	<block wx:for="{{titles}}" wx:key="index">
+		<view class='{{currentIndex==index?"active":""}}'
+     bindtap="handleChoose"
+      data-index="{{index}}" 
+      data-item="{{item}}">
+			<text>
+			{{item}}
+			</text>
+		</view>
+	</block>
+</view>

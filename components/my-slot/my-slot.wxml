@@ -1,0 +1,5 @@
+<!--插槽-->
+
+<view>I'm head</view>
+<slot/>
+<view>I'm foot</view>

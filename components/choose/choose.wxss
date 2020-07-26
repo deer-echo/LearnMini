@@ -1,0 +1,16 @@
+/* components/choose/choose.wxss */
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 88rpx;
+}
+
+.active{
+  color:red;
+}
+.active text{
+  border-bottom:6rpx solid red;
+  padding:20rpx 10rpx;
+
+}

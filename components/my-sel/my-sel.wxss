@@ -1,0 +1,4 @@
+/* components/my-sel/my-sel.wxss */
+.counter{
+  margin-top: 60rpx;
+}

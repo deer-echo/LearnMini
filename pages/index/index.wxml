@@ -1,2 +1,60 @@
 <!--index.wxml-->
 
+<!--1.在json中注册组件
+"name"："path"
+（组件的component要为true）-->
+<!--2.使用自定义组件-->
+<my-cpn/>
+<!--
+  注意：
+  取名和小程序保持一致
+  取名不要wx-为前缀
+  在全局json注册后小程序都可以用
+  使用class时，组件内样式与应用组件的页面不会相互影响
+  若需要相互影响则需要在在自定义组件的js里中设置styleIsolation 
+-->
+<view class="title">I'm user</view>
+<!--2.向组件传入数据和样式-->
+<!--传入title数据和red样式，red向wxss中寻找-->
+<my-cpn title="自定义标题" titleclass="red"/>
+<!--3.监听组件内部发出事件(组件按钮改变页面数据)-->
+<view>counter: {{counter}}</view>
+<!--将组件中的传出事件绑定到页面事件 页面.wxml->页面.js -->
+<my-cpn bind:increment="increment"/>
+
+<!--5.小练习
+向组件传入titles
+为组件绑定方法
+-->
+<choose titles="{{['流行','新品','精选']}}"
+bind:choose="choose"
+/>
+<!--6.页面按钮改变组件内数据
+绑定class/id
+-->
+<my-sel class="sel-class" id="sel-id"/>
+<button bindtap="handleCounter">tap me to change the counter</button>
+<!--7.1单个插槽使用-->
+<my-slot>
+<button size="mini">i'm the slot button</button>
+</my-slot>
+<my-slot>
+<text>Who is slot hahha</text>
+</my-slot>
+<!--滑块-->
+<my-slot>
+<slider value="60"></slider>
+</my-slot>
+<!--
+  7.2多个插槽使用
+    attention!
+    1.give names to every solt, 
+    and use names to ensure the place
+    2.enable 'multipleSlots' in componet's js
+
+    -->
+<my-mslot>
+<button size="mini" slot="slot2">i'm button</button>
+<slider slot="slot1"></slider>
+<text slot="slot3">hhhhhhhh</text>
+</my-mslot>

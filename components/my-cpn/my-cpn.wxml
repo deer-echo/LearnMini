@@ -1,0 +1,11 @@
+<!--components/my-cpn.wxml-->
+<view class="title">I'm title</view>
+<view class="content">I'm content</view>
+<!--
+  外界向组件传递数据和样式
+  数据以{{}}包裹，向js中寻找
+  样式以class定义，在js中封装
+-->
+<view  class="titleclass">{{title}}</view>
+<!--将点击事件绑定到组件js中 组件.wxml->组件.js -->
+<button size="mini" bindtap="handleIncrement">+1</button>
